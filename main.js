@@ -1,8 +1,9 @@
 let Phrase = require("m-nsd3-palindrome");
 
-function palindromeTester() {
-  let string = prompt("パリンドロームをテストしたい文字列を入力してください:");
-  let phrase = new Phrase(string);
+function palindromeTester(event) {
+  event.preventDefault();
+  let phrase = new Phrase(event.target.phrase.value);
+  
   let palindromeResult = document.querySelector("#palindromeResult");
   if (phrase.palindrome()) {
     palindromeResult.innerHTML =  `"<strong>${phrase.content}</strong>"はパリンドロームです！`;
@@ -12,8 +13,8 @@ function palindromeTester() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    let button = document.querySelector("#palindromeTester");
-    button.addEventListener("click", function() {
-      palindromeTester();
+    let tester = document.querySelector("#palindromeTester");
+    tester.addEventListener("submit", function(event) {
+      palindromeTester(event);
     });
   });

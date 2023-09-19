@@ -1,6 +1,6 @@
 {
   "name": "m-nsd3-palindrome",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Parindrome detector",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/m-nsd3/palindrome/issues"
   },
-  "homepage": "https://github.com/m-nsd3/palindrome#readme"
+  "homepage": "https://github.com/m-nsd3/palindrome#readme",
+  "directories": {
+    "test": "test"
+  }
 }
